@@ -1,0 +1,49 @@
+﻿@model Employees
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h2>Edit Employee Entry</h2>
+
+<form asp-controller="Home" asp-action="Edit" method="POST">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div>
+        <label class="form-label">Name</label>
+        <input asp-for="Name" type="text" class="form-control">
+    </div>
+    <div>
+        <label class="form-label">Address</label>
+        <input asp-for="Address" type="text" class="form-control">
+    </div>
+    <div>
+        <label class="form-label">Phone Number</label>
+        <input asp-for="PhoneNumber" type="number" class="form-control">
+    </div>
+    <div>
+        <label class="form-label">Gender</label>
+        <select asp-for="Gender" class="form-control">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="form-label">Job Title</label>
+        <select asp-for="JobTitle" class="form-control">
+            <option>Python</option>
+            <option>Java</option>
+            <option>DevOps</option>
+        </select>
+    </div>
+    <div>
+        <label class="form-label">Hire Date</label>
+        <input asp-for="HireDate" type="date" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Create</button>
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
